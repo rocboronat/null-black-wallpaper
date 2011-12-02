@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.android.livecubes">
+
+    <uses-sdk android:minSdkVersion="7" />
+    <uses-feature android:name="android.software.live_wallpaper" />
+
+    <application
+        android:label="@string/label"
+        android:icon="@drawable/icon"
+        android:thumbnail="@drawable/icon"
+    	android:description="@string/description"
+        >
+
+        <service
+            android:label="@string/label"
+        	android:thumbnail="@drawable/icon"
+    		android:description="@string/description"
+            android:icon="@drawable/icon"
+            android:name="net.rocboronat.android.wallpaper.npe.NPEWallpaper"
+            android:permission="android.permission.BIND_WALLPAPER">
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/npe" 
+            	android:icon="@drawable/icon"/>
+        </service>
+
+    </application>
+</manifest>
