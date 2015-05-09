@@ -1,0 +1,1 @@
+This live wallpaper for Android is used as blank pattern and as efficient wallpaper as well.
